@@ -1,7 +1,7 @@
 import React from 'react';
 import Auxe from '../../hoc/Auxe';
 
-const filterModal = (props) => {
+const FilterModal = (props) => {
     return (
         <Auxe>
             <h3>Find Fans</h3>
@@ -12,8 +12,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Commercial"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Commercial
@@ -24,8 +24,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Industrial"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Industrial
@@ -36,8 +36,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Residential"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Residential
@@ -51,8 +51,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Indoor"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Indoor
@@ -62,8 +62,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Outdoor"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Outdoor
@@ -77,8 +77,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Roof"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Roof
@@ -88,8 +88,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="Wall"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Wall
@@ -99,8 +99,8 @@ const filterModal = (props) => {
                         type="radio"
                         name="react-tips"
                         value="freeStanding"
-                        checked={this.state.selectedOption === "commercial"}
-                        onChange={this.handleOptionChange}
+                        // checked={this.state.selectedOption === "commercial"}
+                        // onChange={this.handleOptionChange}
                         className="form-check-input"
                     />
                     Free standing
@@ -112,4 +112,4 @@ const filterModal = (props) => {
 
 };
 
-export default filterModal;
+export default FilterModal;
