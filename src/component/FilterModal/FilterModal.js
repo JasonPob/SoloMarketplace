@@ -43,6 +43,70 @@ const filterModal = (props) => {
                     Residential
                 </label>
             </div>
+
+            <div>
+                Application  
+                <label>
+                    <input
+                        type="radio"
+                        name="react-tips"
+                        value="Indoor"
+                        checked={this.state.selectedOption === "commercial"}
+                        onChange={this.handleOptionChange}
+                        className="form-check-input"
+                    />
+                    Indoor
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="react-tips"
+                        value="Outdoor"
+                        checked={this.state.selectedOption === "commercial"}
+                        onChange={this.handleOptionChange}
+                        className="form-check-input"
+                    />
+                    Outdoor
+                </label>
+            </div>
+
+            <div>
+            Mounting Location
+            <label>
+                    <input
+                        type="radio"
+                        name="react-tips"
+                        value="Roof"
+                        checked={this.state.selectedOption === "commercial"}
+                        onChange={this.handleOptionChange}
+                        className="form-check-input"
+                    />
+                    Roof
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="react-tips"
+                        value="Wall"
+                        checked={this.state.selectedOption === "commercial"}
+                        onChange={this.handleOptionChange}
+                        className="form-check-input"
+                    />
+                    Wall
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="react-tips"
+                        value="freeStanding"
+                        checked={this.state.selectedOption === "commercial"}
+                        onChange={this.handleOptionChange}
+                        className="form-check-input"
+                    />
+                    Free standing
+                </label>
+                
+            </div>
         </Auxe>
     )
 
