@@ -1,26 +1,24 @@
-import React from 'react';
-import classes from './FilterModal.css';
+import React, {Component} from 'react';
 
-const FilterModal = (props) => (
-    <>
-    <div className={classes.type}>
-        <div className={classes.Label}>{props.category}</div>
-        <button 
-            className={classes.Less} 
-            onClick={props.added}>Commercial</button>
-        <button 
-            className={classes.More} 
-            onClick={props.added}>Industrial</button>
-        <button 
-            className={classes.More} 
-            onClick={props.added}>Residential</button>
-    </div>
+class FilterModal extends Component {
+    state = { 
+        type:["Use Type", "Application", "Mounting Location", "Accessories", "Model year"],
+            useType:["Commercial","Industrial","Residential"],
+            application:["Indoor", "Outdoor"],
+            mountingLocation:["Roof", "Wall", "Free standing"],
+            accessories:["With light", "Without light"],
+        technicalDetails:["Airflow (CFM)","Max power (W)", "Sound at max speed (dBA)","Fan sweep diameter (in)", "Height (in)"],
+        brand:["Selected Brand(s)"],
+        other:["With the words"]
+            
+     }
+    render() { 
+        return ( 
+            <div>
 
-    <div className={classes.techDetails}>
-        <div className={classes.Label}>{props.label}</div>
-        
-    </div>
-    </>
-);
-
+            </div>
+         );
+    }
+}
+ 
 export default FilterModal;
