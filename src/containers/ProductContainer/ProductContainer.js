@@ -12,19 +12,19 @@ export default class ProductContainer extends Component {
         this.state = {
             products =[
                 {
-                title: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
+                model: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
                 airflow: "5,467 CFM",
                 maxpower: "21.14 W at max speed ",
                 sound: "35 dBAat max speed",
                 diameter: "60 fan sweep diameter"
             }, {
-                title: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
+                model: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
                 airflow: "5,467 CFM",
                 maxpower: "21.14 W at max speed ",
                 sound: "35 dBAat max speed",
                 diameter: "60 fan sweep diameter"
             }, {
-                title: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
+                model: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
                 airflow: "5,467 CFM",
                 maxpower: "21.14 W at max speed ",
                 sound: "35 dBAat max speed",
@@ -33,10 +33,12 @@ export default class ProductContainer extends Component {
         }
     }
 
+    //Use this function to update state everytime a product passes through the filter, causing the cards to be rendered
     handleProductCards(state){
         console.log(state);
         const
     }
+
     render() {
         return (
             <Auxe>
@@ -47,7 +49,15 @@ export default class ProductContainer extends Component {
                     {this.state.products.map((_product,_id)=>{
                         return(
                             <ProductCard
-                            
+                            handleProductCards={this.handleProductCards}
+                            key={_id}
+                            id={_product.id}
+                            model={_product.model}
+                            airflow={_product.airflow}
+                            maxpower={_product.maxpower}
+                            sound={_product.sound}
+                            diameter={_product.diameter}
+
                             />
                         )
                     })}

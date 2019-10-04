@@ -35,19 +35,20 @@ class FilterModal2 extends Component {
                 { id: 1, value: "Selected Brand(s)" }],
             other: [
                 { id: 1, value: "With the words" }]
-        }
+        };
+        this.handleModalChanges = this.handleModalChanges.bind(this);
     }
 
-    updateProductCount(){
+    updateFilterCount(){
         console.log(this.state);
-        //Following function is from ProductContainer component, passes Filter component state to ProductContainer
-        // this.props.handleProductCards(this.state);
+        //Following function is from Filter component, passes FilterModal component state to Filter component
+        this.props.updateProductCount(this.state);
     }
 
-    handleFilterChange(){
+    handleModalChanges(){
         this.setState({passStatus: !this.state.status}, this.updateProductCount);
     }
-    
+
     render() {
         return (
             <Form>

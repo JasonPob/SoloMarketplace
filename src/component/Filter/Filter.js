@@ -47,17 +47,17 @@ export default class Filter extends Component{
             other: [
                 { id: 1, value: "With the words" }]
 		};
-		this.handleChange = this.handleFilterChange.bind(this);
+		this.handleFilterChanges = this.handleFilterChanges.bind(this);
 		this.updateProductCount = this.updateProductCount.bind(this);
 	}
     
-    updateProductCount(){
-        console.log(this.state);
+    updateProductCount(state){
+        console.log(state);
         //Following function is from ProductContainer component, passes Filter component state to ProductContainer
-        // this.props.handleProductCards(this.state);
+        this.props.handleProductCards(this.state);
     }
 
-    handleFilterChange(){
+    handleFilterChanges(){
         this.setState({passStatus: !this.state.status}, this.updateProductCount);
     }
 
