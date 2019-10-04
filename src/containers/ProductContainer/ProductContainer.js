@@ -4,7 +4,7 @@ import ProductCard from '../../component/ProductCard/ProductCard';
 import Modal from '../../component/UI/Modal/Modal';
 
 
-class ProductCardDisplay extends Component {
+class ProductContainer extends Component {
     render() {
         return (
             <Auxe>
@@ -16,4 +16,4 @@ class ProductCardDisplay extends Component {
     }
 }
 
-export default ProductCardDisplay; 
+export default ProductContainer; 
