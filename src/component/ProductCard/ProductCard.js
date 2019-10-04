@@ -3,14 +3,7 @@ import { CardDeck, Card, Dropdown } from 'react-bootstrap';
 import classes from './ProductCard.css';
 
 const ProductCard = (props) => {
-    let product = {
-        title: "Big Ass Haiku H Series S3150-S0-BC-04-01-C-01",
-        airflow: "5,467 CFM",
-        maxpower: "21.14 W at max speed ",
-        sound: "35 dBAat max speed",
-        diameter: "60 fan sweep diameter"
-
-    }
+  
 
     return (
         <div>
