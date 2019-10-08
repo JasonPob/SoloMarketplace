@@ -76,6 +76,73 @@ export default class Filter extends Component{
         });
     }
 
+    render() {
+    
+        return (
+          <div className="filter">
+            <form className="filterForm" noValidate>
+              <p className="mb-1">Refine your results</p>
+              <div className="columns text-center">
+                <div className="column col-4 col-xs-12">
+                  <div className="form-group">
+                    <div className="col-3 col-sm-12">
+                      <label className="form-label" htmlFor="price-from">
+                        Product Type:
+                      </label>
+                    </div>
+                    <div className="col-4 col-sm-12">
+                      <input
+                        className="form-input"
+                        min="1990"
+                        max="2020"
+                        type="number"
+                        id="modelYear"
+                        placeholder="1990"
+                      />
+                      <input
+                        className="form-input"
+                        min="1990"
+                        max="2020"
+                        type="number"
+                        id="price-from"
+                        placeholder="2020"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="column col-4 col-xs-12">
+                  <div className="form-group">
+                    <div className="col-3 col-sm-12">
+                      <label className="form-label" htmlFor="postcode">
+                        Postcode
+                      </label>
+                    </div>
+                    <div className="col-9 col-sm-12">
+                      <select className="form-select" id="postcode">
+                        <option value="">Choose...</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div className="column col-4 col-xs-12">
+                  <div className="form-group">
+                    <div className="col-3 col-sm-12">
+                      <label className="form-label" htmlFor="sortorder">
+                        Sort Order
+                      </label>
+                    </div>
+                    <div className="col-9 col-sm-12">
+                      <select className="form-select" id="sortorder">
+                        <option value="">Choose...</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        )
+      }
 
 }
 

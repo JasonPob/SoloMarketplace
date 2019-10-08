@@ -6,6 +6,8 @@ import FilterModal2 from './component/FilterModal/FilterModal2';
 // import FilterModal from './component/FilterModal/FilterModal';
 import Login from './component/Login/Login';
 import Signup from './component/Signup/Signup';
+import Filter from './component/Filter/Filter';
+import DynamicSlider from './component/Filter/DynamicSliders';
 
 
 class App extends Component {
@@ -19,7 +21,8 @@ class App extends Component {
           {/* <Route path="/modal" component={FilterModal}/> */}
           <Route path="/modal2" exact component={FilterModal2}/>
           {/* <Route path="/header" component={Header}/> */}
-          
+          <Route path="/filter" exact component={Filter}/>
+          <Route path="/slider" exact component={DynamicSlider}/>
         </Layout>
       </div>
     );
