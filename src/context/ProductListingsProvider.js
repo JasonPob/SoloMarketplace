@@ -10,15 +10,15 @@ export const ProductListingsConsumer = ProductListingsContext.Consumer;
 
 export class ProductListingsProvider extends React.Component {
     static applyFilter(listings, filter) {
-      const { airflow, maxpower, soundAtMaxSpeed, sweepDiameter } = filter
+      const { airflow, maxPower, soundAtMaxSpeed, sweepDiameter } = filter
       let result = listings
       if (airflow) {
         const desiredAirflow = airflow
         result = result.filter(item => item.airflow >= desiredAirflow)
       }
-      if (maxpower) {
-        const desiredMaxPower = maxpower
-        result = result.filter(item => item.maxpower >= desiredMaxPower)
+      if (maxPower) {
+        const desiredMaxPower = maxPower
+        result = result.filter(item => item.maxPower >= desiredMaxPower)
       }
       if (soundAtMaxSpeed) {
         const desiredSoundAtMaxSpeed = soundAtMaxSpeed
