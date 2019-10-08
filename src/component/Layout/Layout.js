@@ -4,7 +4,7 @@ import Auxe from '../../hoc/Auxe';
 
 const layout = (props) => (
     <Auxe>
-        <div>Header, ProductCard, Filter</div>
+        {/* <div>Header, ProductCard, Filter</div> */}
         <main>
             {props.children}
         </main>
