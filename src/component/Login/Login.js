@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';;
+import {Link} from 'react-router-dom';
+import styles from "../Login/Login.modules.css";
+import {Col, Row, Container} from 'react-bootstrap';
 
 
 class Login extends Component {
@@ -43,13 +45,20 @@ class Login extends Component {
     render() {
         const { username, password, submitted, loading, error } = this.state;
         return (
-            <div className="col-md-6 col-md-offset-3">
+            <>
+            <Container id="gradient">
+                <Row>
+                    <Col>
+            <div className={styles["col-md-4"]}></div>
+            </Col>
+            <Col>
+            <div className={styles["col-md-4"]}>
                 <Link to ={"/signup"}>
-                    <button type="button">
+                    <p>
                         Sign Up
-                    </button>
+                    </p>
                 </Link>
-                <h2>Joole</h2>
+                <img src="../../assets/jooleLogo.png" alt="JooleLogo"></img>
                 <h4>Building Product Selection Platform</h4>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
@@ -74,6 +83,14 @@ class Login extends Component {
                     }
                 </form>
             </div>
+            </Col>
+            <Col>
+            <div className={styles["col-md-4"]}></div>
+            </Col>
+            </Row>
+            </Container>
+          
+            </>
         );
     }
 }

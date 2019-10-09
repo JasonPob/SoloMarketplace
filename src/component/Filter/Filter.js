@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 
-export default class Filter extends Component{
+export default class Filter extends Component {
     constructor(props) {
-		super(props);
-		this.state = {
-			passStatus: false,
+        super(props);
+        this.state = {
+            passStatus: false,
             id: this.props.id,
-            initValues:[
-                {airflow:[2000,10000]},
-                {maxPower:[9.84, 96.52]},
-                {soundAtMaxSpeed:[20,80]},
-                {diameter:[18,96]},
-                {firm:[0,0]},
-                {global:[0,0]}
+            initValues: [
+                { airflow: [2000, 10000] },
+                { maxPower: [9.84, 96.52] },
+                { soundAtMaxSpeed: [20, 80] },
+                { diameter: [18, 96] },
+                { firm: [0, 0] },
+                { global: [0, 0] }
 
             ],
             type: [
@@ -46,103 +46,106 @@ export default class Filter extends Component{
                 { id: 1, value: "Selected Brand(s)" }],
             other: [
                 { id: 1, value: "With the words" }]
-		};
-		this.handleFilterChanges = this.handleFilterChanges.bind(this);
-		this.updateProductCount = this.updateProductCount.bind(this);
-	}
-    
-    updateProductCount(state){
+        };
+        this.handleFilterChanges = this.handleFilterChanges.bind(this);
+        this.updateProductCount = this.updateProductCount.bind(this);
+    }
+
+    updateProductCount(state) {
         console.log(state);
         //Following function is from ProductContainer component, passes Filter component state to ProductContainer
         this.props.handleProductCards(this.state);
     }
 
-    handleFilterChanges(){
-        this.setState({passStatus: !this.state.status}, this.updateProductCount);
+    handleFilterChanges() {
+        this.setState({ passStatus: !this.state.status }, this.updateProductCount);
     }
 
-    resetChanges(){
-        this.setState({passStatus:false, 
-            id:this.props.id,
-            initValues:[
-                {airflow:[2000,10000]},
-                {maxPower:[9.84, 96.52]},
-                {soundAtMaxSpeed:[20,80]},
-                {diameter:[18,96]},
-                {firm:[0,0]},
-                {global:[0,0]}
+    resetChanges() {
+        this.setState({
+            passStatus: false,
+            id: this.props.id,
+            initValues: [
+                { airflow: [2000, 10000] },
+                { maxPower: [9.84, 96.52] },
+                { soundAtMaxSpeed: [20, 80] },
+                { diameter: [18, 96] },
+                { firm: [0, 0] },
+                { global: [0, 0] }
 
             ]
         });
     }
 
     render() {
-    
+
         return (
-          <div className="filter">
-            <form className="filterForm" noValidate>
-              <p className="mb-1">Refine your results</p>
-              <div className="columns text-center">
-                <div className="column col-4 col-xs-12">
-                  <div className="form-group">
-                    <div className="col-3 col-sm-12">
-                      <label className="form-label" htmlFor="price-from">
-                        Product Type:
+            <div className="filter">
+                <form  noValidate>
+                    <p className="mb-1">Refine your results</p>
+                    <div className="columns text-center">
+                        <div className="column col-4 col-xs-12">
+                            <div className="form-group">
+                                <div className="col-3 col-sm-12">
+                                    <label className="form-label" htmlFor="price-from">
+                                        Product Type:
                       </label>
-                    </div>
-                    <div className="col-4 col-sm-12">
-                      <input
-                        className="form-input"
-                        min="1990"
-                        max="2020"
-                        type="number"
-                        id="modelYear"
-                        placeholder="1990"
-                      />
-                      <input
-                        className="form-input"
-                        min="1990"
-                        max="2020"
-                        type="number"
-                        id="price-from"
-                        placeholder="2020"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="column col-4 col-xs-12">
-                  <div className="form-group">
-                    <div className="col-3 col-sm-12">
-                      <label className="form-label" htmlFor="postcode">
-                        Postcode
+
+                                    <div className="col-4 col-sm-12">
+                                        <input
+                                            className="form-input"
+                                            min="1990"
+                                            max="2020"
+                                            type="number"
+                                            id="modelYear"
+                                            placeholder="1990"
+                                        />
+                                        <input
+                                            className="form-input"
+                                            min="1990"
+                                            max="2020"
+                                            type="number"
+                                            id="price-from"
+                                            placeholder="2020"
+                                        />
+                                    </div>
+                                </div>
+
+
+                                <div className="col-3 col-sm-12">
+                                    <label className="form-label" htmlFor="price-from">
+                                        Product Type:
                       </label>
+
+                                    <div className="col-4 col-sm-12">
+                                        <input
+                                            className="form-input"
+                                            min="1990"
+                                            max="2020"
+                                            type="number"
+                                            id="modelYear"
+                                            placeholder="1990"
+                                        />
+                                        <input
+                                            className="form-input"
+                                            min="1990"
+                                            max="2020"
+                                            type="number"
+                                            id="price-from"
+                                            placeholder="2020"
+                                        />
+                                    </div>
+                                </div>
+                                {/* Following tag is end of form */}
+                            </div>
+                        </div>
+                      
+                        
                     </div>
-                    <div className="col-9 col-sm-12">
-                      <select className="form-select" id="postcode">
-                        <option value="">Choose...</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div className="column col-4 col-xs-12">
-                  <div className="form-group">
-                    <div className="col-3 col-sm-12">
-                      <label className="form-label" htmlFor="sortorder">
-                        Sort Order
-                      </label>
-                    </div>
-                    <div className="col-9 col-sm-12">
-                      <select className="form-select" id="sortorder">
-                        <option value="">Choose...</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+                </form>
+            </div>
         )
-      }
+    }
 
 }
 

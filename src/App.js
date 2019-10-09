@@ -8,6 +8,7 @@ import Login from './component/Login/Login';
 import Signup from './component/Signup/Signup';
 import Filter from './component/Filter/Filter';
 import DynamicSlider from './component/Filter/DynamicSliders';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends Component {
