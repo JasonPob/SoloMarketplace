@@ -59,17 +59,18 @@ class Login extends Component {
                     </p>
                 </Link>
                 <img src="../../assets/jooleLogo.png" alt="JooleLogo"></img>
-                <h4>Building Product Selection Platform</h4>
+                <br /><br />
+                <h5>Building Product Selection Platform</h5>
+                <br />
+                <br />
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                        <label htmlFor="username">Username</label>
                         <input type="text" className="form-control" name="username" placeholder="Username or Email" value={username} onChange={this.handleChange} />
                         {submitted && !username &&
                             <div className="help-block">Username is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                        <label htmlFor="password">Password</label>
                         <input type="password" className="form-control" name="password" placeholder="Password" value={password} onChange={this.handleChange} />
                         {submitted && !password &&
                             <div className="help-block">Password is required</div>
