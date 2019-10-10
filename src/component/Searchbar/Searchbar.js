@@ -9,7 +9,10 @@ const Searchbar = () => {
         { key: 'Option 3', text: 'Option 3', value: 'Option 3' },
     ]
     
-    var style ={width:'67%'}; 
+    var style ={
+        width:'67%',
+      
+}; 
 
     let handleSubmit = () => {
         console.log("asad")

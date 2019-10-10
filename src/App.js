@@ -25,7 +25,7 @@ class App extends Component {
           {/* <Route path="/header" component={Header}/> */}
           <Route path="/filter" exact component={Filter}/>
           <Route path="/slider" exact component={DynamicSlider}/>
-          <Route path="/test" exact component={Searchbar}/>
+          <Route path="/search" exact component={Searchbar}/>
         </Layout>
       </div>
     );
