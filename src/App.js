@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
 import Layout from './component/Layout/Layout';
-// import ProductContainer from './containers/ProductContainer/ProductContainer';
+import ProductContainer from './containers/ProductContainer/ProductContainer';
 import FilterModal2 from './component/FilterModal/FilterModal2';
 // import FilterModal from './component/FilterModal/FilterModal';
 import Login from './component/Login/Login';
@@ -18,7 +18,7 @@ class App extends Component {
         <Layout>
           <Route path="/" strict exact component={Login}/>
           <Route path="/signup" strict exact component={Signup}/>
-          {/* <Route path="/products" component={ProductContainer}/> */}
+          <Route path="/products" component={ProductContainer}/>
           {/* <Route path="/modal" component={FilterModal}/> */}
           <Route path="/modal2" exact component={FilterModal2}/>
           {/* <Route path="/header" component={Header}/> */}

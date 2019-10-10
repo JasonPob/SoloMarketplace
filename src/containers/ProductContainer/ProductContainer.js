@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Auxe from '../../hoc/Auxe';
-import ProductCard from '../../component/ProductCard/ProductCard';
 import Modal from '../../component/UI/Modal/Modal';
 import Filter from '../../component/Filter/Filter';
 import Header from '../../component/Header/Header';
@@ -35,18 +34,18 @@ export default class ProductContainer extends Component {
     }
 
     //Use this function to update state everytime a product passes through the filter, causing the cards to be rendered
-    handleProductCards(state){
-        console.log(state);
-        const
-    }
+    // handleProductCards(state){
+    //     console.log(state);
+    //     const
+    // }
 
     render() {
         return (
             <Auxe>
-                <Header></Header>
+                {/* <Header></Header>
                 <Modal />
-                <Filter></Filter>
-                <ProductResults></ProductResults>
+                <Filter></Filter> */}
+                <ProductResults result = {this.state.products}></ProductResults>
             </Auxe>
         );
     }
