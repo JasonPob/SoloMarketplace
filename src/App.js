@@ -16,8 +16,8 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <Route path="" exact component={Login}/>
-          <Route path="/signup" exact component={Signup}/>
+          <Route path="/" strict exact component={Login}/>
+          <Route path="/signup" strict exact component={Signup}/>
           {/* <Route path="/products" component={ProductContainer}/> */}
           {/* <Route path="/modal" component={FilterModal}/> */}
           <Route path="/modal2" exact component={FilterModal2}/>
