@@ -4,6 +4,7 @@ import ProductCard from '../../component/ProductCard/ProductCard';
 import Modal from '../../component/UI/Modal/Modal';
 import Filter from '../../component/Filter/Filter';
 import Header from '../../component/Header/Header';
+import ProductResults from '../../component/ProductResults/ProductResults';
 
 
 export default class ProductContainer extends Component {
@@ -45,24 +46,7 @@ export default class ProductContainer extends Component {
                 <Header></Header>
                 <Modal />
                 <Filter></Filter>
-                <div className="renderedProductCards">
-                    {this.state.products.map((_product,_id)=>{
-                        return(
-                            <ProductCard
-                            handleProductCards={this.handleProductCards}
-                            key={_id}
-                            id={_product.id}
-                            model={_product.model}
-                            airflow={_product.airflow}
-                            maxpower={_product.maxpower}
-                            sound={_product.sound}
-                            diameter={_product.diameter}
-
-                            />
-                        )
-                    })}
-                </div>
-
+                <ProductResults></ProductResults>
             </Auxe>
         );
     }
