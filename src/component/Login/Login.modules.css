@@ -1,6 +1,59 @@
+body{
+    background:100%;
+    background-color: #64bbdd; 
+    background-image: linear-gradient(#64bbdd, #e8f0f3); 
+    background-size:cover;
+}
+
 #gradient {
     background:100%;
     background-color: #64bbdd; 
     background-image: linear-gradient(#64bbdd, #e8f0f3); 
     background-size:cover;
   }
+
+  #error{
+    color:red;
+  }
+  #signupDiv {
+    text-align: right;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: gray; 
+    width:100px;
+}
+
+#loginContainer {
+  text-align: right;
+  font-weight: bold;
+  position: absolute;
+  color: gray; 
+}
+
+#slogan{
+  font-weight: bold;
+  color:gray;
+  text-align: center;
+  
+}
+
+img{
+    text-align: center;
+    width: 75%;
+    height: auto;
+}
+
+#logo{
+  text-align: center;
+}
+
+#loginButton{
+  /* text-align: right; */
+  /* position: absolute; 
+  bottom: 0; 
+  right: 0; 
+  width: 100px; 
+  text-align:right; */
+}

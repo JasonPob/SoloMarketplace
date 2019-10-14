@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from "../Login/Login.modules.css";
-import {Col, Row, Container} from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
+import img from './logo.png';
 
 
 class Login extends Component {
@@ -32,7 +33,7 @@ class Login extends Component {
 
         this.setState({ submitted: true });
         const { username, password, } = this.state;
-        console.log( "Username: " + username + " Password: " + password);
+        console.log("Username: " + username + " Password: " + password);
 
         // stop here if form is invalid
         if (!(username && password)) {
@@ -46,51 +47,65 @@ class Login extends Component {
         const { username, password, submitted, loading, error } = this.state;
         return (
             <>
-            <Container id="gradient">
-                <Row>
-                    <Col>
-            <div className={styles["col-md-4"]}></div>
-            </Col>
-            <Col>
-            <div className={styles["col-md-4"]}>
-                <Link to ={"/signup"}>
-                    <p>
-                        Sign Up
+                <Container id="gradient">
+                    <Row>
+                       
+                        <Col>
+                            <div className={styles["col-md-4"]}></div>
+                        </Col>
+                        
+                        <Col>
+                            <div className={styles["col-md-4"]}>
+                                <div id="loginContainer">
+                                    <div id="signupDiv">
+                                        <Link to={"/signup"}>
+                                            <p>
+                                                Sign Up
                     </p>
-                </Link>
-                <img src="../../assets/jooleLogo.png" alt="JooleLogo"></img>
-                <br /><br />
-                <h5>Building Product Selection Platform</h5>
-                <br />
-                <br />
-                <form name="form" onSubmit={this.handleSubmit}>
-                    <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                        <input type="text" className="form-control" name="username" placeholder="Username or Email" value={username} onChange={this.handleChange} />
-                        {submitted && !username &&
-                            <div className="help-block">Username is required</div>
-                        }
-                    </div>
-                    <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                        <input type="password" className="form-control" name="password" placeholder="Password" value={password} onChange={this.handleChange} />
-                        {submitted && !password &&
-                            <div className="help-block">Password is required</div>
-                        }
-                    </div>
-                    <div className="form-group">
-                        <button className="btn btn-primary" disabled={loading}>Login</button>
-                    </div>
-                    {error &&
-                        <div className={'alert alert-danger'}>{error}</div>
-                    }
-                </form>
-            </div>
-            </Col>
-            <Col>
-            <div className={styles["col-md-4"]}></div>
-            </Col>
-            </Row>
-            </Container>
-          
+                                        </Link>
+                                    </div>
+                                    <br></br><br></br>
+                                    <div id="logo">
+                                        <img src={img} alt="jooleLogo"></img>
+                                    </div>
+                                    <br /><br />
+                                    <h5 id="slogan">Building Product Selection Platform</h5>
+                                    <br />
+                                    <br />
+                                    <form name="form" onSubmit={this.handleSubmit}>
+                                        <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
+                                            <input type="text" className="form-control" name="username" placeholder="Username or Email" value={username} onChange={this.handleChange} />
+                                            {submitted && !username &&
+                                                <div className="help-block" id="error">Username is required</div>
+                                            }
+                                        </div>
+                                        <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
+                                            <input type="password" className="form-control" name="password" placeholder="Password" value={password} onChange={this.handleChange} />
+                                            {submitted && !password &&
+                                                <div className="help-block" id="error">Password is required</div>
+                                            }
+                                        </div>
+                                        {/* <div id="loginButton">
+                                            <div className="form-group">
+                                                <button className="btn btn-primary" disabled={loading}>Login</button>
+                                            </div>
+                                        </div>
+                                        {error &&
+                                            <div className={'alert alert-danger'} id="error">{error}</div>
+                                        } */}
+                                    </form>
+                                </div>
+                            </div>
+                        </Col>
+                        
+                        
+                        <Col>
+                            <div className={styles["col-md-4"]}></div>
+                        </Col>
+
+                    </Row>
+                </Container>
+
             </>
         );
     }
