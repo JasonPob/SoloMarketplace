@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from "../Login/Login.modules.css";
 import { Col, Row, Container } from 'react-bootstrap';
 import img from './logo.png';
+import  { Redirect } from 'react-router-dom'
 
 
 class Login extends Component {
@@ -23,6 +24,7 @@ class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
     handleChange(e) {
         const { name, value } = e.target;
         this.setState({ [name]: value });
@@ -39,12 +41,13 @@ class Login extends Component {
         if (!(username && password)) {
             return;
         }
-
-
+        else {
+            this.props.history.push('/search')
+        }
     }
 
     render() {
-        const { username, password, submitted, loading,  } = this.state;
+        const { username, password, submitted, loading, } = this.state;
         return (
             <>
                 <Container id="gradient">
@@ -87,7 +90,10 @@ class Login extends Component {
                                         </div>
                                         <br></br>
                                         <div className="form-group">
-                                                <button className="btn btn-primary" disabled={loading}>Login</button>
+
+
+                                            <button className="btn btn-primary" disabled={loading}>Login</button>
+
                                         </div>
                                     </form>
                                 </div>
