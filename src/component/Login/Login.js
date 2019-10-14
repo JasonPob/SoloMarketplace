@@ -44,16 +44,16 @@ class Login extends Component {
     }
 
     render() {
-        const { username, password, submitted, loading, error } = this.state;
+        const { username, password, submitted, loading,  } = this.state;
         return (
             <>
                 <Container id="gradient">
                     <Row>
-                       
+
                         <Col>
                             <div className={styles["col-md-4"]}></div>
                         </Col>
-                        
+
                         <Col>
                             <div className={styles["col-md-4"]}>
                                 <div id="loginContainer">
@@ -85,20 +85,18 @@ class Login extends Component {
                                                 <div className="help-block" id="error">Password is required</div>
                                             }
                                         </div>
-                                        {/* <div id="loginButton">
-                                            <div className="form-group">
+                                        <br></br>
+                                        <div className="form-group">
+                                            
                                                 <button className="btn btn-primary" disabled={loading}>Login</button>
-                                            </div>
+                                            
                                         </div>
-                                        {error &&
-                                            <div className={'alert alert-danger'} id="error">{error}</div>
-                                        } */}
                                     </form>
                                 </div>
                             </div>
                         </Col>
-                        
-                        
+
+
                         <Col>
                             <div className={styles["col-md-4"]}></div>
                         </Col>

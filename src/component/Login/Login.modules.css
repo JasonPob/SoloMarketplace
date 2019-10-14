@@ -36,7 +36,6 @@ body{
   font-weight: bold;
   color:gray;
   text-align: center;
-  
 }
 
 img{
@@ -50,10 +49,14 @@ img{
 }
 
 #loginButton{
-  /* text-align: right; */
-  /* position: absolute; 
+  position: absolute; 
   bottom: 0; 
-  right: 0; 
   width: 100px; 
-  text-align:right; */
+}
+
+.btn{
+position: absolute;
+margin-top:100%;
+bottom: 0;
+right: 0;
 }
