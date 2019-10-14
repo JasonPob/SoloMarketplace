@@ -53,75 +53,89 @@ class Signup extends Component {
         return (
             <Container id="gradient">
                 <Row>
-                <Col>
-                            <div className={styles["col-md-4"]}></div>
-                        </Col>
+
                     <Col>
-                        <div className="col-md-4">
-                            <div id="signupInfo">
-                            <Link to={"/signup"}>
-                                <p>
-                                    Login
+                        <div className={styles["col-md-4"]}></div>
+                    </Col>
+
+                    <Col>
+                        <div className={styles["col-md-4"]}>
+                            <div id="signupContainer">
+                                <div id="loginDiv">
+                                    <Link to={"/"}>
+                                        <p>
+                                            Login
                                 </p>
-                            </Link>
-                            <div id="logo">
-                            <img src={img} alt="jooleLogo"></img>
+                                    </Link>
                                 </div>
-                                <div id="slogan">
-                            <h4>Building Product Selection Platform</h4>
-                            </div>
-                            <form name="form" onSubmit={this.handleSubmit}>
-                                <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                                    <label htmlFor="username">Username</label>
-                                    <input type="text" className="form-control" name="username" placeholder="Username" value={username} onChange={this.handleChange} />
-                                    {submitted && !username &&
-                                        <div className="help-block">Username is required</div>
-                                    }
+                                <br></br><br></br>
+                                <div id="logo">
+                                    <img src={img} alt="jooleLogo"></img>
                                 </div>
-                                <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
-                                    <label htmlFor="email">Email</label>
-                                    <input type="text" className="form-control" name="email" placeholder="Email" value={email} onChange={this.handleChange} />
-                                    {submitted && !email &&
-                                        <div className="help-block">Email is required</div>
-                                    }
-                                </div>
-                                <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                                    <label htmlFor="password">Password</label>
-                                    <input type="password" className="form-control" name="password" placeholder="Password" value={password} onChange={this.handleChange} />
-                                    {submitted && !password &&
-                                        <div className="help-block">Password is required</div>
-                                    }
-                                </div>
-                                <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                                    <label htmlFor="password">Confirm Password</label>
-                                    <input type="password" className="form-control" name="retypedPassword" placeholder="Retype Password" value={retypedPassword} onChange={this.handleChange} />
-                                    {submitted && retypedPassword !== password &&
-                                        <div className="help-block">Passwords are not the same!</div>
-                                    }
-                                </div>
-                                <div className="form-group">
-                                    <button className="btn btn-primary" disabled={loading}>Submit</button>
-                                </div>
-                                {submitted && retypedPassword === password &&
-                                    <div className="help-block">
-                                        <p>User account created!</p>
-                                        <p><Link to="/">
-                                            <button className="btn btn-primary" disabled={loading}>
-                                                Proceed to Login
-                    </button>
-                                        </Link></p>
+                                <h4 id="instructions">Create a user account</h4>
+                                <form name="form" onSubmit={this.handleSubmit}>
+                                    <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
+                                        <div id="label">
+                                            <label htmlFor="username">Username</label>
+                                        </div>
+                                        <input type="text" className="form-control" name="username" placeholder="Username" value={username} onChange={this.handleChange} />
+                                        {submitted && !username &&
+                                            <div className="help-block" id="error">Username is required</div>
+                                        }
                                     </div>
-                                }
-                                {error &&
-                                    <div className={'alert alert-danger'}>{error}</div>
-                                }
-                            </form>
+                                    <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
+                                        <div id="label">
+                                            <label htmlFor="email">Email</label>
+                                        </div>
+                                        <input type="text" className="form-control" name="email" placeholder="Email" value={email} onChange={this.handleChange} />
+                                        {submitted && !email &&
+                                            <div className="help-block" id="error">Email is required</div>
+                                        }
+                                    </div>
+                                    <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
+                                        <div id="label">
+                                            <label htmlFor="password">Password</label>
+                                        </div>
+                                        <input type="password" className="form-control" name="password" placeholder="Password" value={password} onChange={this.handleChange} />
+                                        {submitted && !password &&
+                                            <div className="help-block" id="error">Password is required</div>
+                                        }
+                                    </div>
+                                    <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
+                                        <div id="label">
+                                            <label htmlFor="password">Confirm Password</label>
+                                        </div>
+                                        <input type="password" className="form-control" name="retypedPassword" placeholder="Retype Password" value={retypedPassword} onChange={this.handleChange} />
+                                        {submitted && retypedPassword === password &&
+                                            <div className="help-block" id="error">Passwords are not the same!</div>
+                                        }
+                                    </div>
+                                    <br></br>
+                                    <div className="form-group">
+                                        <button className="btn btn-primary" disabled={loading}>Submit</button>
+                                    </div>
+                                    {submitted && retypedPassword === password &&
+                                        <div className="help-block">
+                                            <p>User account created!</p>
+                                            <br></br>
+                                            <p><Link to="/">
+                                                <br></br>
+                                                <button className="btn btn-primary" disabled={loading}>
+                                                    Proceed to Login
+                    </button>
+                                            </Link></p>
+                                        </div>
+                                    }
+                                    {error &&
+                                        <div className={'alert alert-danger'}>{error}</div>
+                                    }
+                                </form>
                             </div>
                         </div>
                     </Col>
                     <Col>
-                            <div className={styles["col-md-4"]}></div>
-                        </Col>
+                        <div className={styles["col-md-4"]}></div>
+                    </Col>
                 </Row>
             </Container>
         );

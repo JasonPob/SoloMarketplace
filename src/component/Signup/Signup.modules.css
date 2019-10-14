@@ -1,3 +1,10 @@
+body{
+  background:100%;
+  background-color: #64bbdd; 
+  background-image: linear-gradient(#64bbdd, #e8f0f3); 
+  background-size:cover;
+}
+
 #gradient {
     background:100%;
     background-color: #64bbdd; 
@@ -5,13 +12,22 @@
     background-size:cover;
   }
 
-  #signupInfo{
+  #signupContainer{
     font-weight: bold;
     color: black;
-    text-align: center;
+  position: absolute;
+  text-align: center;
     width:250px;
-
   }
+  #loginDiv {
+    text-align: right;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: gray; 
+    width:100px;
+}
 
   #loginButton {
     font-weight: bold;
@@ -22,11 +38,10 @@
     width:100px;
     text-align: right;
   }
-  #slogan{
+  #instructions{
     font-weight: bold;
     color:gray;
     text-align: center;
-    
   }
 
   img{
@@ -37,4 +52,12 @@
 
 #logo{
   text-align: center;
+}
+
+#label{
+  text-align: left;
+}
+
+#error{
+  color:red;
 }
