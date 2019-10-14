@@ -1,0 +1,23 @@
+#searchbarContainer{
+    text-align: center;
+  font-weight: bold;
+  position: absolute;
+  color: gray; 
+  width: 100%;
+}
+
+img{
+    text-align: center;
+    width: 75%;
+    height: auto;
+}
+
+#logo{
+  text-align: center;
+}
+
+#slogan{
+    font-weight: bold;
+    color:gray;
+    text-align: center;
+  }
