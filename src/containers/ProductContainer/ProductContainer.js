@@ -4,7 +4,7 @@ import Modal from '../../component/UI/Modal/Modal';
 // import Filter from '../../component/Filter/Filter';
 // import Header from '../../component/Header/Header';
 import ProductResults from '../../component/ProductResults/ProductResults';
-
+import {connect} from 'react-redux';
 
 export default class ProductContainer extends Component {
     constructor() {
@@ -59,3 +59,15 @@ export default class ProductContainer extends Component {
 
 }
 
+
+const mapStateToProps = state => {
+    return {
+        items: state.products
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        onProductAdded: () => dispatch({type:})
+    }
+}

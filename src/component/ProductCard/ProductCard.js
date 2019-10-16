@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const ProductCard =(props) =>  {
+    console.log(props)
     
         return (
             <div style={{ margin: '1rem 0' }}>
@@ -11,7 +12,7 @@ const ProductCard =(props) =>  {
                     <div className="card-image">
                     </div>
                     <div className="card-header">
-                        <div className="card-title h5">{props.model}</div>
+                        <div className="card-title h5">{props.results[0].model}</div>
                         <div className="card-title h6"> {props.airflow}</div>
                         <div className="card-subtitle text-gray">{props.maxpower}</div>
                     </div>
