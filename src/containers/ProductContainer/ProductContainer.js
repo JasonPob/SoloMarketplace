@@ -60,14 +60,14 @@ export default class ProductContainer extends Component {
 }
 
 
-const mapStateToProps = state => {
-    return {
-        items: state.products
-    }
-}
+// const mapStateToProps = state => {
+//     return {
+//         items: state.products
+//     }
+// }
 
-const mapDispatchToProps = dispatch => {
-    return{
-        onProductAdded: () => dispatch({type:})
-    }
-}
+// const mapDispatchToProps = dispatch => {
+//     return{
+//         onProductAdded: () => dispatch({type:})
+//     }
+// }
