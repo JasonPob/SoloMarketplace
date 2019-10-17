@@ -5,11 +5,18 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import {createStore} from 'redux';
-import reducer from './store/reducer'; 
+import {createStore, applyMiddleware} from 'redux';
+import reducer from './store/reducers/auth'; 
+import authReducer from './store/reducers/auth';
 import 'bootstrap/dist/css/bootstrap.css';
 
-const store = createStore(reducer)
+const store = createStore(rootReducer, composerEnhancers(
+    applyMiddleware(thunk)
+));
+
+const rootReducer = combnieReducers({
+    auth:authReducer
+});
 
 const app = (
     <Provider store = {store}>
