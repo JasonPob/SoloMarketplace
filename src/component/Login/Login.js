@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from "../Login/Login.modules.css";
+import AuthenticationService from '../service/AuthenticationService';
 import { Col, Row, Container } from 'react-bootstrap';
 import img from './logo.png';
 

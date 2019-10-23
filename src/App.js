@@ -12,6 +12,8 @@ import DynamicSlider from './component/Filter/DynamicSliders';
 import Searchbar from './component/Searchbar/Searchbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CardActions } from '@material-ui/core';
+import AuthenticationService from '../service/AuthenticationService';
+import AuthenticatedRoute from './AuthenticatedRoute';
 import * as actions from './store/actions/index';
 
 
@@ -50,6 +52,7 @@ class App extends Component {
           <Route path="/" strict exact component={Login} />
           <Route path="/signup" strict exact component={Signup} />
           <Route path="/products" component={ProductContainer} />
+          {/* <AuthenticatedRoute path="/products" component={ProductContainer}/> */}
           {/* <Route path="/modal" component={FilterModal}/> */}
           <Route path="/modal2" exact component={FilterModal2} />
           {/* <Route path="/header" component={Header}/> */}
