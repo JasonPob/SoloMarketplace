@@ -32,4 +32,4 @@ const ProductCard =(props) =>  {
     // ProductCard.propTypes = {
     //     type: PropTypes.string.isRequired
     // };
-export default ProductCard;
+export default ProductCard; 

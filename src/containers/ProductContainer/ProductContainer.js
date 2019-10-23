@@ -35,9 +35,10 @@ export default class ProductContainer extends Component {
         }
     }
 
-    promptModal = () => {
-        this.setState({promptModal: true});
-    }
+    // promptModal = () => {
+    //     this.setState({promptModal: true});
+    // }
+
     //Use this function to update state everytime a product passes through the filter, causing the cards to be rendered
     // handleProductCards(state){
     //     console.log(state);
