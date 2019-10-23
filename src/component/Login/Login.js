@@ -14,9 +14,8 @@ class Login extends Component {
         this.state = {
             username: '',
             password: '',
-            submitted: false,
-            loading: false,
-            error: ''
+            hasLoginFailed: false,
+            showSuccessMessage: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -37,6 +36,19 @@ class Login extends Component {
         const { username, password, } = this.state;
         console.log("Username: " + username + " Password: " + password);
 
+
+        //Authenticate user
+        AuthenticationService.executeBasicAuthenticationService(this.state.username, this.state.password)
+            .then(() => {
+                AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
+                this.props.history.push('/search')
+            }).catch(() => {
+                this.setState({ showSuccessMessage: false })
+                this.setState({ hasLoginFailed: true })
+            })
+
+
+
         // stop here if form is invalid
         if (!(username && password)) {
             return;
@@ -45,6 +57,8 @@ class Login extends Component {
             this.props.history.push('/search')
         }
     }
+
+
 
     render() {
         const { username, password, submitted, loading, } = this.state;
@@ -75,6 +89,8 @@ class Login extends Component {
                                     <h5 id="slogan">Building Product Selection Platform</h5>
                                     <br />
                                     <br />
+                                    {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Username/Password combination!</div>}
+                                    {this.state.showSuccessMessage && <div>Login Sucessful!</div>}
                                     <form name="form" onSubmit={this.handleSubmit}>
                                         <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                                             <input type="text" className="form-control" name="username" placeholder="Username or Email" value={username} onChange={this.handleChange} />
