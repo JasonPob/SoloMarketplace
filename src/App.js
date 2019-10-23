@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { CardActions } from '@material-ui/core';
 import AuthenticationService from '../service/AuthenticationService';
 import AuthenticatedRoute from './AuthenticatedRoute';
+import ProductPage from './containers/ProductPage/ProductPage';
 import * as actions from './store/actions/index';
 
 
@@ -52,6 +53,7 @@ class App extends Component {
           <Route path="/" strict exact component={Login} />
           <Route path="/signup" strict exact component={Signup} />
           <Route path="/products" component={ProductContainer} />
+          {/* <Route path="/prodcuts/:id" component={ProductPage} />  */}
           {/* <AuthenticatedRoute path="/products" component={ProductContainer}/> */}
           {/* <Route path="/modal" component={FilterModal}/> */}
           <Route path="/modal2" exact component={FilterModal2} />

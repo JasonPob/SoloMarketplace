@@ -16,19 +16,24 @@ export default class ProductContainer extends Component {
                 airflow: "5,467 CFM",
                 maxpower: "21.14 W at max speed ",
                 sound: "35 dBAat max speed",
-                diameter: "60 fan sweep diameter"
+                diameter: "60 fan sweep diameter",
+                imgUrl: "https://cdn02.plentymarkets.com/wzjm2a03n3t8/item/images/3016/middle/Deckenventilator--Everett--Espresso--von--Westinghou.jpg"
             }, {
                 model: "Emerson Luray Eco Series CF860",
                 airflow: "8,500 CFM",
                 maxpower: "33 W at max speed ",
                 sound: "40 dBAat max speed",
-                diameter: "60 fan sweep diameter"
+                diameter: "60 fan sweep diameter",
+                imgUrl: "https://cdn02.plentymarkets.com/wzjm2a03n3t8/item/images/3016/middle/Deckenventilator--Everett--Espresso--von--Westinghou.jpg"
+
             }, {
                 model: "Minka Aviation Series F853-RW",
                 airflow: "6,604 CFM",
                 maxpower: "25.92 W at max speed ",
                 sound: "36 dBAat max speed",
-                diameter: "60 fan sweep diameter"
+                diameter: "60 fan sweep diameter",
+                imgUrl: "https://cdn02.plentymarkets.com/wzjm2a03n3t8/item/images/3016/middle/Deckenventilator--Everett--Espresso--von--Westinghou.jpg"
+
             },],
 
             promptModal: false

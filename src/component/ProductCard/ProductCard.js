@@ -3,33 +3,39 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const ProductCard =(props) =>  {
+const ProductCard = (props) => {
     console.log(props)
-    
-        return (
-            <div style={{ margin: '1rem 0' }}>
-                <div >
-                    <div className="card-image">
-                    </div>
-                    <div className="card-header">
-                        <div className="card-title h5">{props.results[0].model}</div>
-                        <div className="card-title h6"> {props.airflow}</div>
-                        <div className="card-subtitle text-gray">{props.maxpower}</div>
-                    </div>
-                    <div className="card-body">{props.sound}</div>
-                    <div className="card-body">{props.diameter}</div>
-                    <div className="card-footer">
-                        <Link className="btn btn-primary" to={`/details/`}>
-                            Go to property
-                  </Link>
-                    </div>
-                </div>
+//map ALL products
+    const allProducts = props.map(product =>
+        <div key={product.model + index} >
+            <div className="card-image">
+                <img src={product.imgUrl} alt={`${product.model}`} width="200" />
             </div>
-        )
-    
+            <div className="card-header">
+                <div className="card-title h5">{product.model}</div>
+                <div className="card-title h6"> {product.airflow}</div>
+                <div className="card-subtitle text-gray">{product.maxpower}</div>
+            </div>
+            <div className="card-body">{product.sound}</div>
+            <div className="card-body">{product.diameter}</div>
+            <div className="card-footer">
+                <Link className="btn btn-primary" to={`/details/`}>
+                    Go to property
+          </Link>
+            </div>
+        </div>
+            )
 
-}
-    // ProductCard.propTypes = {
-    //     type: PropTypes.string.isRequired
-    // };
+    return (
+        <div style={{ margin: '1rem 0' }}>
+          {allProducts}
+            </div>
+    )
+
+};
+
+ {/* ProductCard.propTypes = {
+     type: PropTypes.string.isRequired
+ }; */}
+ 
 export default ProductCard; 
